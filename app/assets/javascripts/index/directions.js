@@ -246,7 +246,7 @@ OSM.Directions = function (map) {
     // TODO: collapse width of sidebar back to previous
   }
 
-  setEngine("fossgis_osrm_car");
+  setEngine("valhalla_car");
   setEngine(Cookies.get("_osm_directions_engine"));
 
   modeGroup.on("change", "input[name='modes']", function (e) {

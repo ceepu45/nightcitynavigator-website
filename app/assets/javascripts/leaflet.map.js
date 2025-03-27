@@ -200,7 +200,7 @@ L.OSM.Map = L.Map.extend({
     }
 
     const params = new URLSearchParams();
-    const layers = this.getLayersCode().replace("M", "");
+    const layers = this.getLayersCode().replace("U", "");
 
     if (layers) {
       params.set("layers", layers);

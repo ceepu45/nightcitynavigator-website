@@ -182,7 +182,7 @@
     };
   }
 
-  OSM.Directions.addEngine(new FOSSGISOSRMEngine("car", "car"), true);
-  OSM.Directions.addEngine(new FOSSGISOSRMEngine("bicycle", "bike"), true);
-  OSM.Directions.addEngine(new FOSSGISOSRMEngine("foot", "foot"), true);
+  // OSM.Directions.addEngine(new FOSSGISOSRMEngine("car", "car"), true);
+  // OSM.Directions.addEngine(new FOSSGISOSRMEngine("bicycle", "bike"), true);
+  // OSM.Directions.addEngine(new FOSSGISOSRMEngine("foot", "foot"), true);
 }());

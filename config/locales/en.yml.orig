@@ -689,7 +689,8 @@ en:
       description: The UNCMP server encountered an unexpected condition that prevented it from fulfilling the request (HTTP 500)
     not_found:
       title: File not found
-      description: Couldn't find a file/directory/API operation by that name on the UNCMP server (HTTP 404)
+<<<<<<< HEAD
+      description: Couldn't find a file/directory/API operation by that name on the OpenStreetMap server (HTTP 404)
   follows:
     show:
       follow:
@@ -706,6 +707,37 @@ en:
     destroy:
       success: "You successfully unfollowed %{name}."
       not_followed: "You are not following %{name}."
+||||||| parent of ed5d8ed9f (Strip down website for UNCMP)
+      description: Couldn't find a file/directory/API operation by that name on the OpenStreetMap server (HTTP 404)
+  friendships:
+    make_friend:
+      heading: "Add %{user} as a friend?"
+      button: "Add as friend"
+      success: "%{name} is now your friend!"
+      failed: "Sorry, failed to add %{name} as a friend."
+      already_a_friend: "You are already friends with %{name}."
+      limit_exceeded: "You have friended a lot of users recently. Please wait a while before trying to friend any more."
+    remove_friend:
+      heading: "Unfriend %{user}?"
+      button: "Unfriend"
+      success: "%{name} was removed from your friends."
+      not_a_friend: "%{name} is not one of your friends."
+=======
+      description: Couldn't find a file/directory/API operation by that name on the UNCMP server (HTTP 404)
+  friendships:
+    make_friend:
+      heading: "Add %{user} as a friend?"
+      button: "Add as friend"
+      success: "%{name} is now your friend!"
+      failed: "Sorry, failed to add %{name} as a friend."
+      already_a_friend: "You are already friends with %{name}."
+      limit_exceeded: "You have friended a lot of users recently. Please wait a while before trying to friend any more."
+    remove_friend:
+      heading: "Unfriend %{user}?"
+      button: "Unfriend"
+      success: "%{name} was removed from your friends."
+      not_a_friend: "%{name} is not one of your friends."
+>>>>>>> ed5d8ed9f (Strip down website for UNCMP)
   geocoder:
     search:
       title:
@@ -1683,6 +1715,14 @@ en:
     partners_corpmembers: "OSMF corporate members"
     partners_partners: "partners"
     tou: "Terms of Use"
+<<<<<<< HEAD
+||||||| parent of ed5d8ed9f (Strip down website for UNCMP)
+    osm_offline: "The OpenStreetMap database is currently offline while essential database maintenance work is carried out."
+    osm_read_only: "The OpenStreetMap database is currently in read-only mode while essential database maintenance work is carried out."
+=======
+    osm_offline: "The UNCMP database is currently offline while essential database maintenance work is carried out."
+    osm_read_only: "The UNCMP database is currently in read-only mode while essential database maintenance work is carried out."
+>>>>>>> ed5d8ed9f (Strip down website for UNCMP)
     nothing_to_preview: "Nothing to preview."
     help: Help
     about: About
@@ -1715,8 +1755,16 @@ en:
       footer_html: "You can also read the message at %{readurl} and you can send a message to the author at %{replyurl}"
     follow_notification:
       hi: "Hi %{to_user},"
-      subject: "[UNCMP] %{user} followed you"
-      followed_you: "%{user} is now following you on UNCMP."
+<<<<<<< HEAD
+      subject: "[OpenStreetMap] %{user} followed you"
+      followed_you: "%{user} is now following you on OpenStreetMap."
+||||||| parent of ed5d8ed9f (Strip down website for UNCMP)
+      subject: "[OpenStreetMap] %{user} added you as a friend"
+      had_added_you: "%{user} has added you as a friend on OpenStreetMap."
+=======
+      subject: "[UNCMP] %{user} added you as a friend"
+      had_added_you: "%{user} has added you as a friend on UNCMP."
+>>>>>>> ed5d8ed9f (Strip down website for UNCMP)
       see_their_profile: "You can see their profile at %{userurl}."
       see_their_profile_html: "You can see their profile at %{userurl}."
       follow_them: "You can also follow them at %{followurl}."
@@ -1969,8 +2017,16 @@ en:
       failure: Couldn't update profile.
   sessions:
     new:
+<<<<<<< HEAD
       tab_title: "Log In"
+      login_to_authorize_html: "Log in to OpenStreetMap to access %{client_app_name}."
+||||||| parent of ed5d8ed9f (Strip down website for UNCMP)
+      tab_title: "Log in"
+      login_to_authorize_html: "Log in to OpenStreetMap to access %{client_app_name}."
+=======
+      tab_title: "Log in"
       login_to_authorize_html: "Log in to UNCMP to access %{client_app_name}."
+>>>>>>> ed5d8ed9f (Strip down website for UNCMP)
       email or username: "Email Address or Username"
       password: "Password"
       remember: "Remember me"
@@ -2436,7 +2492,7 @@ en:
       providers:
         fossgis_osrm: "OSRM"
         graphhopper: "GraphHopper"
-        valhalla: "Valhalla"
+        fossgis_valhalla: "Valhalla"
     welcome:
       title: Welcome!
       introduction: |
@@ -2690,22 +2746,50 @@ en:
     offline:
       heading: "GPX Storage Offline"
       message: "The GPX file storage and upload system is currently unavailable."
+<<<<<<< HEAD
     feeds:
       show:
-        title: "UNCMP GPS Traces"
+        title: "OpenStreetMap GPS Traces"
       description:
         description_with_count:
           one: "GPX file with %{count} point from %{user}"
           other: "GPX file with %{count} points from %{user}"
         description_without_count: "GPX file from %{user}"
+||||||| parent of ed5d8ed9f (Strip down website for UNCMP)
+    georss:
+      title: "OpenStreetMap GPS Traces"
+    description:
+      description_with_count:
+        one: "GPX file with %{count} point from %{user}"
+        other: "GPX file with %{count} points from %{user}"
+      description_without_count: "GPX file from %{user}"
+=======
+    georss:
+      title: "UNCMP GPS Traces"
+    description:
+      description_with_count:
+        one: "GPX file with %{count} point from %{user}"
+        other: "GPX file with %{count} points from %{user}"
+      description_without_count: "GPX file from %{user}"
+>>>>>>> ed5d8ed9f (Strip down website for UNCMP)
   application:
     permission_denied: You do not have permission to access that action
     require_cookies:
       cookies_needed: "You appear to have cookies disabled - please enable cookies in your browser before continuing."
     setup_user_auth:
-      blocked_zero_hour: "You have an urgent message on the UNCMP website. You need to read the message before you will be able to save your edits."
+<<<<<<< HEAD
+      blocked_zero_hour: "You have an urgent message on the OpenStreetMap website. You need to read the message before you will be able to save your edits."
       blocked: "Your access to the API has been blocked. Please log in to the web interface to find out more."
       need_to_see_terms: "Your access to the API is temporarily suspended. Please log in to the web interface to view the Contributor Terms. You do not need to agree, but you must view them."
+||||||| parent of ed5d8ed9f (Strip down website for UNCMP)
+      blocked_zero_hour: "You have an urgent message on the OpenStreetMap website. You need to read the message before you will be able to save your edits."
+      blocked: "Your access to the API has been blocked. Please log-in to the web interface to find out more."
+      need_to_see_terms: "Your access to the API is temporarily suspended. Please log-in to the web interface to view the Contributor Terms. You do not need to agree, but you must view them."
+=======
+      blocked_zero_hour: "You have an urgent message on the UNCMP website. You need to read the message before you will be able to save your edits."
+      blocked: "Your access to the API has been blocked. Please log-in to the web interface to find out more."
+      need_to_see_terms: "Your access to the API is temporarily suspended. Please log-in to the web interface to view the Contributor Terms. You do not need to agree, but you must view them."
+>>>>>>> ed5d8ed9f (Strip down website for UNCMP)
     settings_menu:
       account_settings: Account Settings
       oauth2_applications: OAuth 2 Applications
@@ -2758,7 +2842,13 @@ en:
     permissions:
       missing: "You have not permitted the application access to this facility"
     scopes:
-      openid: Sign in using UNCMP
+<<<<<<< HEAD
+      openid: Sign in using OpenStreetMap
+||||||| parent of ed5d8ed9f (Strip down website for UNCMP)
+      openid: Sign-in using OpenStreetMap
+=======
+      openid: Sign-in using UNCMP
+>>>>>>> ed5d8ed9f (Strip down website for UNCMP)
       read_prefs: Read user preferences
       write_prefs: Modify user preferences
       write_diary: Create diary entries and comments
@@ -2826,8 +2916,16 @@ en:
   users:
     new:
       title: "Sign Up"
+<<<<<<< HEAD
       tab_title: "Sign Up"
+      signup_to_authorize_html: "Sign up with OpenStreetMap to access %{client_app_name}."
+||||||| parent of ed5d8ed9f (Strip down website for UNCMP)
+      tab_title: "Sign up"
+      signup_to_authorize_html: "Sign up with OpenStreetMap to access %{client_app_name}."
+=======
+      tab_title: "Sign up"
       signup_to_authorize_html: "Sign up with UNCMP to access %{client_app_name}."
+>>>>>>> ed5d8ed9f (Strip down website for UNCMP)
       no_auto_account_create: "Unfortunately we are not currently able to create an account for you automatically."
       please_contact_support_html: 'Please contact %{support_link} to arrange for an account to be created - we will try and deal with the request as quickly as possible.'
       support: support
@@ -3289,6 +3387,30 @@ en:
     edit_help: Move the map and zoom in on a location you want to edit, then click here.
     directions:
       ascend: "Ascend"
+<<<<<<< HEAD
+||||||| parent of ed5d8ed9f (Strip down website for UNCMP)
+      engines:
+        fossgis_osrm_bike: "Bicycle (OSRM)"
+        fossgis_osrm_car: "Car (OSRM)"
+        fossgis_osrm_foot: "Foot (OSRM)"
+        graphhopper_bicycle: "Bicycle (GraphHopper)"
+        graphhopper_car: "Car (GraphHopper)"
+        graphhopper_foot: "Foot (GraphHopper)"
+        fossgis_valhalla_bicycle: "Bicycle (Valhalla)"
+        fossgis_valhalla_car: "Car (Valhalla)"
+        fossgis_valhalla_foot: "Foot (Valhalla)"
+=======
+      engines:
+        fossgis_osrm_bike: "Bicycle (OSRM)"
+        fossgis_osrm_car: "Car (OSRM)"
+        fossgis_osrm_foot: "Foot (OSRM)"
+        graphhopper_bicycle: "Bicycle (GraphHopper)"
+        graphhopper_car: "Car (GraphHopper)"
+        graphhopper_foot: "Foot (GraphHopper)"
+        valhalla_bicycle: "Bicycle (Valhalla)"
+        valhalla_car: "Car (Valhalla)"
+        valhalla_foot: "Foot (Valhalla)"
+>>>>>>> ed5d8ed9f (Strip down website for UNCMP)
       descend: "Descend"
       distance: "Distance"
       distance_m: "%{distance}m"

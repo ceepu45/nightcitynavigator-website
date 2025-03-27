@@ -74,7 +74,7 @@
     };
   }
 
-  OSM.Directions.addEngine(new GraphHopperEngine("car", "car"), true);
-  OSM.Directions.addEngine(new GraphHopperEngine("bicycle", "bike"), true);
-  OSM.Directions.addEngine(new GraphHopperEngine("foot", "foot"), true);
+  // OSM.Directions.addEngine(new GraphHopperEngine("car", "car"), true);
+  // OSM.Directions.addEngine(new GraphHopperEngine("bicycle", "bike"), true);
+  // OSM.Directions.addEngine(new GraphHopperEngine("foot", "foot"), true);
 }());

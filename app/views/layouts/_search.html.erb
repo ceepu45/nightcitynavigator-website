@@ -82,9 +82,11 @@
           </label>
         </div>
         <select class="routing_engines form-select py-1 px-2" name="routing_engines">
+          <!--
           <option value="graphhopper" disabled><%= t("site.search.providers.graphhopper") %></option>
           <option value="fossgis_osrm" disabled><%= t("site.search.providers.fossgis_osrm") %></option>
-          <option value="fossgis_valhalla" disabled><%= t("site.search.providers.fossgis_valhalla") %></option>
+          -->
+          <option value="valhalla" disabled><%= t("site.search.providers.valhalla") %></option>
         </select>
         <%= submit_tag t("site.search.submit_text"), :class => "routing_go btn btn-primary py-1 px-2", :data => { :disable_with => false } %>
       </div>

@@ -77,6 +77,17 @@ L.OSM.TracestrackTopo = L.OSM.TileLayer.extend({
   }
 });
 
+L.OSM.UNCMPCarto = L.OSM.TileLayer.extend({
+  options: {
+    // url: 'https://tiles.uncmp.org/nc-carto/{z}/{x}/{y}.png',
+    url: 'https://maps.cpusocket.net/tiles/nightcity/{z}/{x}/{y}.png',
+    minZoom: 11,
+    maxZoom: 19,
+    bounds: L.latLngBounds(L.latLng(-0.1, -0.1), L.latLng(0.1, 0.1)),
+    attribution: '© <a href="https://uncmp.org/copyright" target="_blank">UNCMP</a> contributors.'
+  }
+});
+
 L.OSM.GPS = L.OSM.TileLayer.extend({
   options: {
     url: 'https://gps.tile.openstreetmap.org/lines/{z}/{x}/{y}.png',

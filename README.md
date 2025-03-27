@@ -1,4 +1,9 @@
-# openstreetmap-website
+# Night City Mapping Project Website
+
+This is a fork of the [openstreetmap-website](https://openstreetmap/openstreetmap-website) project,
+modified to support mapping the world of the game Cyberpunk 2077 instead of the real world.
+
+# Everything below this line is the openstreetmap-webiste README:
 
 [![Lint](https://github.com/openstreetmap/openstreetmap-website/workflows/Lint/badge.svg?branch=master&event=push)](https://github.com/openstreetmap/openstreetmap-website/actions?query=workflow%3ALint%20branch%3Amaster%20event%3Apush)
 [![Tests](https://github.com/openstreetmap/openstreetmap-website/workflows/Tests/badge.svg?branch=master&event=push)](https://github.com/openstreetmap/openstreetmap-website/actions?query=workflow%3ATests%20branch%3Amaster%20event%3Apush)

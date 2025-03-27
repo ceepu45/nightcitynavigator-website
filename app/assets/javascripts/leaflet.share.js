@@ -41,10 +41,12 @@ L.OSM.share = function (options) {
         .attr("for", "long_input")
         .attr("id", "long_link")
         .text(OSM.i18n.t("javascripts.share.long_link")))
+/*
       .append($("<a class='btn btn-primary'>")
         .attr("for", "short_input")
         .attr("id", "short_link")
         .text(OSM.i18n.t("javascripts.share.short_link")))
+*/
       .append($("<a class='btn btn-primary'>")
         .attr("for", "embed_html")
         .attr("id", "embed_link")
@@ -102,6 +104,7 @@ L.OSM.share = function (options) {
           .attr("class", "text-body-secondary")
           .text(OSM.i18n.t("javascripts.share.paste_html")));
 
+    /*
     // Geo URI
 
     const $geoUriSection = $("<div>")
@@ -116,6 +119,7 @@ L.OSM.share = function (options) {
       .appendTo($geoUriSection)
       .append($("<a>")
         .attr("id", "geo_uri"));
+    */
 
     // Image
 
@@ -343,9 +347,9 @@ L.OSM.share = function (options) {
 
       // Link / Embed
 
-      $("#short_input").val(map.getShortUrl(marker));
+      // $("#short_input").val(map.getShortUrl(marker));
       $("#long_input").val(map.getUrl(marker));
-      $("#short_link").attr("href", map.getShortUrl(marker));
+      // $("#short_link").attr("href", map.getShortUrl(marker));
       $("#long_link").attr("href", map.getUrl(marker));
 
       const params = new URLSearchParams({
@@ -373,11 +377,13 @@ L.OSM.share = function (options) {
           "<small><a href=\"" + escapeHTML(map.getUrl(marker)) + "\">" +
           escapeHTML(OSM.i18n.t("javascripts.share.view_larger_map")) + "</a></small>");
 
+      /*
       // Geo URI
 
       $("#geo_uri")
         .attr("href", map.getGeoUri(marker))
         .html(map.getGeoUri(marker));
+      */
 
       // Image
 

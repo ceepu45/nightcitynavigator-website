@@ -133,13 +133,23 @@ imagery_blacklist: []
 overpass_url: "https://overpass.uncmp.org/api/interpreter"
 overpass_credentials: false
 # Routing endpoints
-graphhopper_url: "https://graphhopper.uncmp.org/api/1/route"
-fossgis_osrm_url: "https://osrm.uncmp.org/"
-valhalla_url: "https://valhalla.uncmp.org/route"
+<<<<<<< HEAD
+graphhopper_url: "https://graphhopper.com/api/1/route"
+fossgis_osrm_url: "https://routing.openstreetmap.de/"
+fossgis_valhalla_url: "https://valhalla1.openstreetmap.de/route"
 # Main website hosts to match in linkify
 linkify_hosts: ["www.openstreetmap.org", "www.osm.org", "www.openstreetmap.com", "openstreetmap.org", "osm.org", "openstreetmap.com"]
 # Shorter host to replace main hosts
 linkify_hosts_replacement: "osm.org"
+||||||| parent of ed5d8ed9f (Strip down website for UNCMP)
+graphhopper_url: "https://graphhopper.com/api/1/route"
+fossgis_osrm_url: "https://routing.openstreetmap.de/"
+fossgis_valhalla_url: "https://valhalla1.openstreetmap.de/route"
+=======
+graphhopper_url: "https://graphhopper.uncmp.org/api/1/route"
+fossgis_osrm_url: "https://osrm.uncmp.org/"
+fossgis_valhalla_url: "https://valhalla.uncmp.org/route"
+>>>>>>> ed5d8ed9f (Strip down website for UNCMP)
 # External authentication credentials
 #google_auth_id: ""
 #google_auth_secret: ""
