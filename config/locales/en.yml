@@ -3264,7 +3264,7 @@ en:
         overlays: Enable overlays for troubleshooting the map
         title: "Layers"
       copyright_text: "© %{copyright_link}"
-      openstreetmap_contributors: "OpenStreetMap contributors"
+      uncmp_contributors: "Unofficial Night City Mapping Project contributors"
       make_a_donation: Make a Donation
       website_and_api_terms: Website and API terms
       cyclosm_credit: "Tiles style by %{cyclosm_link} hosted by %{osm_france_link}"
@@ -3276,6 +3276,7 @@ en:
       tracestrack: Tracestrack
       hotosm_credit: "Tiles style by %{hotosm_link} hosted by %{osm_france_link}"
       hotosm_name: Humanitarian OpenStreetMap Team
+      uncmp_credit: "Tiles style based on OSM Carto"
     site:
       edit_tooltip: Edit the map
       edit_disabled_tooltip: Zoom in to edit the map

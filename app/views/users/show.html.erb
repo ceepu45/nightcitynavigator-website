@@ -21,6 +21,7 @@
               <%= link_to t(".my notes"), user_notes_path(current_user) %>
               <span class='badge count-number'><%= number_with_delimiter(current_user.note_comments.size) %></span>
             </li>
+<% if false %>
             <li>
               <%= link_to t(".my traces"), :controller => "traces", :action => "mine" %>
               <span class='badge count-number'><%= number_with_delimiter(current_user.traces.size) %></span>
@@ -33,6 +34,7 @@
               <%= link_to t(".my comments"), user_diary_comments_path(current_user) %>
               <span class='badge count-number'><%= number_with_delimiter(current_user.diary_comments.size) %></span>
             </li>
+<% end %>
             <li>
               <%= link_to t(".my_account"), account_path %>
             </li>

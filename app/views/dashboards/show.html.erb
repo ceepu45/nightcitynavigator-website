@@ -3,6 +3,7 @@
 <% end %>
 
 <div class="row">
+<% if false %>
   <div class="col-md order-md-last">
     <% if !current_user.home_location? %>
       <div id="map" class="content_map border border-secondary-subtle">
@@ -21,6 +22,7 @@
       <%= tag.div "", :id => "map", :class => "content_map border border-secondary-subtle rounded z-0", :data => { :user => user_data } %>
     <% end %>
   </div>
+<% end %>
 
   <div class="col-md">
     <h2><%= t ".followings" %></h2>
@@ -41,6 +43,7 @@
 
     <hr>
 
+<% if false %>
     <h2><%= t ".nearby users" %></h2>
 
     <% if @nearby_users.empty? %>
@@ -56,5 +59,6 @@
         <%= render :partial => "contact", :collection => @nearby_users, :locals => { :type => "nearby mapper" } %>
       </div>
     <% end %>
+<% end %>
   </div>
 </div>
