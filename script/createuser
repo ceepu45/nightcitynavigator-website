@@ -1,0 +1,47 @@
+#!/usr/bin/env ruby
+
+require File.join(File.dirname(__FILE__), "..", "config", "environment")
+
+if ARGV.length != 2
+  puts "Usage: createuser <email> <display_name>"
+  exit 2
+end
+
+email = ARGV[0]
+display = ARGV[1]
+
+# User Params:
+# :email
+# :display_name
+# :auth_provider
+# :auth_uid
+# :pass_crypt
+# :pass_crypt_confirmation
+
+user = User.new(:email => email,
+                :display_name => display)
+
+# Default to a random secure password
+user.pass_crypt = SecureRandom.base64(16)
+user.pass_crypt_confirmation = user.pass_crypt
+
+if user.invalid?
+  puts "Something went wrong creating the user: #{user.errors.full_messages}"
+else
+  # From UserController.save_new_user
+  user.data_public = true
+  user.description = ""
+  user.languages = ["en-US"]
+  user.terms_agreed = Time.now.utc
+  user.tou_agreed = Time.now.utc
+  user.terms_seen = true
+  user.auth_provider = nil
+  user.auth_uid = nil
+
+  user.activate
+  user.save
+
+  # Send the user a reset password link, so they can set the password + validate the email.
+  UserMailer.lost_password(user, user.generate_token_for(:password_reset)).deliver_now
+  puts "User #{user[:display_name]} created. Confirmation email sent."
+end
