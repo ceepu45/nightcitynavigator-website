@@ -86,9 +86,11 @@
         </div>
       </form>
     <% else -%>
+    <% if false %>
       <p>
         <%= link_to t(".log_in_to_comment"), login_path(:referer => request.fullpath) %>
       </p>
+    <% end %>
     <% end -%>
   <% else %>
     <form class="mb-3" action="#">

@@ -63,10 +63,12 @@
     </article>
   <% end %>
 
+  <% if false %>
   <% unless current_user %>
     <p>
       <%= link_to(t(".join_discussion"), login_path(:referer => request.fullpath)) %>
     </p>
+  <% end %>
   <% end %>
 
   <% if current_user %>

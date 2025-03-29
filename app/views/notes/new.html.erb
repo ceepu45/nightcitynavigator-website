@@ -4,7 +4,7 @@
 
 <div class="note">
   <p class="alert alert-info"><%= t(".intro") %></p>
-  <% if !current_user %>
+  <% if false && !current_user %>
     <div class="alert alert-warning pb-0">
       <p><%= t ".anonymous_warning_html",
                :log_in => link_to(t(".anonymous_warning_log_in"), login_path(:referer => new_note_path)),

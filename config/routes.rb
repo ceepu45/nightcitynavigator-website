@@ -187,10 +187,10 @@ OpenStreetMap::Application.routes.draw do
   get "/copyright" => "site#copyright"
   get "/welcome" => "site#welcome"
   get "/fixthemap" => "site#fixthemap"
-  get "/help" => "site#help"
+  #get "/help" => "site#help"
   get "/about/:about_locale" => "site#about"
   get "/about" => "site#about"
-  get "/communities" => "site#communities"
+  #get "/communities" => "site#communities"
   get "/history" => "changesets#index"
   get "/history/feed" => "changesets#feed", :defaults => { :format => :atom }
   scope "/history" do
@@ -264,30 +264,30 @@ OpenStreetMap::Application.routes.draw do
   end
 
   # diary pages
-  resources :diary_entries, :path => "diary", :only => [:new, :create, :index] do
-    collection do
-      get "friends" => "diary_entries#index", :friends => true
-      get "nearby" => "diary_entries#index", :nearby => true
-    end
-  end
-  get "/user/:display_name/diary/rss" => "diary_entries#rss", :defaults => { :format => :rss }
-  get "/diary/:language/rss" => "diary_entries#rss", :defaults => { :format => :rss }
-  get "/diary/rss" => "diary_entries#rss", :defaults => { :format => :rss }
-  get "/user/:display_name/diary" => "diary_entries#index"
-  get "/diary/:language" => "diary_entries#index"
-  scope "/user/:display_name" do
-    resources :diary_entries, :path => "diary", :only => [:edit, :update, :show], :id => /\d+/ do
-      member do
-        post :hide
-        post :unhide
-      end
-    end
-  end
-  match "/user/:display_name/diary/:id/subscribe" => "diary_entries#subscribe", :via => [:get, :post], :as => :diary_entry_subscribe, :id => /\d+/
-  match "/user/:display_name/diary/:id/unsubscribe" => "diary_entries#unsubscribe", :via => [:get, :post], :as => :diary_entry_unsubscribe, :id => /\d+/
-  post "/user/:display_name/diary/:id/comments" => "diary_comments#create", :id => /\d+/, :as => :comment_diary_entry
-  post "/diary_comments/:comment/hide" => "diary_comments#hide", :comment => /\d+/, :as => :hide_diary_comment
-  post "/diary_comments/:comment/unhide" => "diary_comments#unhide", :comment => /\d+/, :as => :unhide_diary_comment
+  #resources :diary_entries, :path => "diary", :only => [:new, :create, :index] do
+  #  collection do
+  #    get "friends" => "diary_entries#index", :friends => true
+  #    get "nearby" => "diary_entries#index", :nearby => true
+  #  end
+  #end
+  #get "/user/:display_name/diary/rss" => "diary_entries#rss", :defaults => { :format => :rss }
+  #get "/diary/:language/rss" => "diary_entries#rss", :defaults => { :format => :rss }
+  #get "/diary/rss" => "diary_entries#rss", :defaults => { :format => :rss }
+  #get "/user/:display_name/diary" => "diary_entries#index"
+  #get "/diary/:language" => "diary_entries#index"
+  #scope "/user/:display_name" do
+  #  resources :diary_entries, :path => "diary", :only => [:edit, :update, :show], :id => /\d+/ do
+  #    member do
+  #      post :hide
+  #      post :unhide
+  #    end
+  #  end
+  #end
+  #match "/user/:display_name/diary/:id/subscribe" => "diary_entries#subscribe", :via => [:get, :post], :as => :diary_entry_subscribe, :id => /\d+/
+  #match "/user/:display_name/diary/:id/unsubscribe" => "diary_entries#unsubscribe", :via => [:get, :post], :as => :diary_entry_unsubscribe, :id => /\d+/
+  #post "/user/:display_name/diary/:id/comments" => "diary_comments#create", :id => /\d+/, :as => :comment_diary_entry
+  #post "/diary_comments/:comment/hide" => "diary_comments#hide", :comment => /\d+/, :as => :hide_diary_comment
+  #post "/diary_comments/:comment/unhide" => "diary_comments#unhide", :comment => /\d+/, :as => :unhide_diary_comment
 
   # user pages
   get "/user/terms", :to => redirect(:path => "/account/terms")

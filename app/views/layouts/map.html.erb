@@ -30,6 +30,7 @@
       <%= yield %>
     </div>
 
+<% if false %>
     <% unless current_user %>
       <div class="welcome position-relative p-3" hidden>
         <button type="button" class="btn-close position-absolute end-0 top-0 m-2 rounded-5 p-2" aria-label="<%= t("javascripts.close") %>"></button>
@@ -46,6 +47,7 @@
         </div>
       </div>
     <% end %>
+<% end %>
 
     <%= render :partial => "layouts/banner" %>
   </div>
