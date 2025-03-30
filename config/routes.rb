@@ -291,7 +291,8 @@ OpenStreetMap::Application.routes.draw do
 
   # user pages
   get "/user/terms", :to => redirect(:path => "/account/terms")
-  resources :users, :path => "user", :param => :display_name, :only => [:new, :create, :show] do
+  #resources :users, :path => "user", :param => :display_name, :only => [:new, :create, :show] do
+  resources :users, :path => "user", :param => :display_name, :only => [:show] do
     resource :role, :controller => "user_roles", :path => "roles/:role", :only => [:create, :destroy]
     scope :module => :users do
       resources :diary_comments, :only => :index

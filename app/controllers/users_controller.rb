@@ -47,7 +47,8 @@ class UsersController < ApplicationController
       render_unknown_user params[:display_name]
     end
   end
-
+=begin
+   Disallow user creation for now
   def new
     @title = t ".title"
     @referer = safe_referer(params[:referer])
@@ -115,6 +116,8 @@ class UsersController < ApplicationController
       end
     end
   end
+
+=end
 
   def go_public
     current_user.data_public = true
