@@ -1,18 +1,18 @@
 # The server protocol and host
 server_protocol: "https"
-server_url: "uncmp.example.com"
+server_url: "ncn.example.com"
 # Publisher
 #publisher_url: ""
 # The generator
-generator: "UNCMP server"
-copyright_owner: "Unoffical Night City Mapping Project and contributors"
-attribution_url: "http://www.uncmp.org/copyright"
+generator: "Night City Navigator server"
+copyright_owner: "Night City Navigator and contributors"
+attribution_url: "http://www.nightcitynavigator.com/copyright"
 license_url: "http://opendatacommons.org/licenses/odbl/1-0/"
 # Support email address
-support_email: "mapadmin@uncmp.example.com"
+support_email: "mapadmin@ncn.example.com"
 # Sender addresses for emails
-email_from: "UNCMP <mapadmin@uncmp.example.com>"
-email_return_path: "mapadmin@uncmp.example.com"
+email_from: "Night City Navigator <mapadmin@ncn.example.com>"
+email_return_path: "mapadmin@ncn.example.com"
 # API version
 api_version: "0.6"
 # Application status - possible values are:
@@ -120,7 +120,7 @@ attachments_dir: ":rails_root/public/attachments"
 # List of memcache servers to use for caching
 #memcache_servers: []
 # URL of Nominatim instance to use for geocoding
-nominatim_url: "https://nominatim.uncmp.org/"
+nominatim_url: "https://nominatim.nightcitynavigator.org/"
 # Default editor
 default_editor: "id"
 # OAuth application for the web site
@@ -130,12 +130,12 @@ default_editor: "id"
 # Imagery to return in capabilities as blacklisted
 imagery_blacklist: []
 # URL of Overpass instance to use for feature queries
-overpass_url: "https://overpass.uncmp.org/api/interpreter"
+overpass_url: "https://overpass.nightcitynavigator.org/api/interpreter"
 overpass_credentials: false
 # Routing endpoints
-graphhopper_url: "https://graphhopper.uncmp.org/api/1/route"
-fossgis_osrm_url: "https://osrm.uncmp.org/"
-valhalla_url: "https://valhalla.uncmp.org/route"
+graphhopper_url: "https://graphhopper.nightcitynavigator.org/api/1/route"
+fossgis_osrm_url: "https://osrm.nightcitynavigator.org/"
+valhalla_url: "https://valhalla.nightcitynavigator.org/route"
 # Main website hosts to match in linkify
 linkify_hosts: ["www.openstreetmap.org", "www.osm.org", "www.openstreetmap.com", "openstreetmap.org", "osm.org", "openstreetmap.com"]
 # Shorter host to replace main hosts

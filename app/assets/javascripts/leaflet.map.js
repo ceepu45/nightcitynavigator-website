@@ -69,7 +69,7 @@ L.OSM.Map = L.Map.extend({
       attribution += OSM.i18n.t("javascripts.map.copyright_text", {
         copyright_link: $("<a>", {
           href: "/copyright",
-          text: OSM.i18n.t("javascripts.map.uncmp_contributors")
+          text: OSM.i18n.t("javascripts.map.ncn_contributors")
         }).prop("outerHTML")
       });
 

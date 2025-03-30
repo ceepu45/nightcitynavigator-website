@@ -1,9 +1,9 @@
-- leafletOsmId: "UNCMPCarto"
+- leafletOsmId: "NCNCarto"
   code: "U"
-  layerId: "uncmp-carto"
-  nameId: "uncmpcarto"
+  layerId: "ncn-carto"
+  nameId: "ncncarto"
   canEmbed: true
   canDownloadImage: true
   credit:
-    id: "uncmp_credit"
+    id: "ncn_credit"
 

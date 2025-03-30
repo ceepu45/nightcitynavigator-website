@@ -1,4 +1,4 @@
-# Night City Mapping Project Website
+# Night City Navigator
 
 This is a fork of the [openstreetmap-website](https://openstreetmap/openstreetmap-website) project,
 modified to support mapping the world of the game Cyberpunk 2077 instead of the real world.
