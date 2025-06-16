@@ -136,6 +136,7 @@ overpass_credentials: false
 graphhopper_url: "https://graphhopper.nightcitynavigator.org/api/1/route"
 fossgis_osrm_url: "https://osrm.nightcitynavigator.org/"
 valhalla_url: "https://valhalla.nightcitynavigator.org/route"
+image_export_url: "https://tile.nightcitynavigator.org/cgi-bin/export"
 # Main website hosts to match in linkify
 linkify_hosts: ["www.openstreetmap.org", "www.osm.org", "www.openstreetmap.com", "openstreetmap.org", "osm.org", "openstreetmap.com"]
 # Shorter host to replace main hosts

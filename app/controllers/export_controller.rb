@@ -25,15 +25,7 @@ class ExportController < ApplicationController
       # redirect to a special 'export' cgi script
       scale = params[:mapnik_scale]
 
-      redirect_to "https://render.openstreetmap.org/cgi-bin/export?bbox=#{bbox}&scale=#{scale}&format=#{format}", :allow_other_host => true
-    when "cyclemap", "transportmap"
-      zoom = params[:zoom]
-      lat = params[:lat]
-      lon = params[:lon]
-      width = params[:width]
-      height = params[:height]
-
-      redirect_to "https://tile.thunderforest.com/static/#{style[..-4]}/#{lon},#{lat},#{zoom}/#{width}x#{height}.#{format}?apikey=#{Settings.thunderforest_key}", :allow_other_host => true
+      redirect_to "#{Settings.image_export_url}?bbox=#{bbox}&scale=#{scale}&format=#{format}", :allow_other_host => true
     end
   end
 

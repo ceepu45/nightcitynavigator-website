@@ -33,7 +33,7 @@ window.onload = function () {
   const isDarkTheme = args.get("theme") === "dark" || (args.get("theme") !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches);
   const layers = <%= MapLayers::embed_definitions("config/layers.yml").to_json %>;
   const layerId = (args.get("layer") || "").replaceAll(" ", "");
-  const layerConfig = layers[layerId] || layers.mapnik;
+  const layerConfig = layers[layerId] || layers["ncn-carto"];
   const layer = (isDarkTheme && layerConfig.leafletOsmDarkId) || layerConfig.leafletOsmId;
   new L.OSM[layer]({ apikey: layerConfig.apikey, ...options[layerId] }).addTo(map);
 
