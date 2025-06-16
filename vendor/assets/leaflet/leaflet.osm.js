@@ -79,8 +79,7 @@ L.OSM.TracestrackTopo = L.OSM.TileLayer.extend({
 
 L.OSM.NCNCarto = L.OSM.TileLayer.extend({
   options: {
-    // url: 'https://tiles.nightcitynavigator.org/nc-carto/{z}/{x}/{y}.png',
-    url: 'https://maps.cpusocket.net/tiles/nightcity/{z}/{x}/{y}.png',
+    url: 'https://tile.nightcitynavigator-test/nightcity/{z}/{x}/{y}.png',
     minZoom: 11,
     maxZoom: 19,
     bounds: L.latLngBounds(L.latLng(-0.1, -0.1), L.latLng(0.1, 0.1)),
