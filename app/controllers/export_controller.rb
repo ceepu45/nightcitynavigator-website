@@ -16,12 +16,13 @@ class ExportController < ApplicationController
     style = params[:format]
     format = params[:mapnik_format]
 
+    logger.info("recieved style: #{style}")
     case style
     when "osm"
       # redirect to API map get
       redirect_to api_map_path(:bbox => bbox)
 
-    when "mapnik"
+    when "ncn-carto"
       # redirect to a special 'export' cgi script
       scale = params[:mapnik_scale]
 

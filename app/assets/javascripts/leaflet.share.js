@@ -217,7 +217,7 @@ L.OSM.share = function (options) {
     }
 
     const hiddenExportDefaults = {
-      format: "mapnik",
+      format: "ncn-carto",
       zoom: map.getZoom(),
       width: 0,
       height: 0
