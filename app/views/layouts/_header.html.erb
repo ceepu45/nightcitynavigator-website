@@ -32,6 +32,24 @@
   <nav class='secondary d-flex gap-2 flex-grow-1 align-items-center'>
     <ul id='secondary-nav-menu' class='nav flex-grow-1' data-turbo-permanent>
       <% if Settings.status != "database_offline" && can?(:index, Issue) %>
+  <% if false %>
+        <li class="nav-item">
+          <%= link_to issues_path(:status => "open"), :class => header_nav_link_class(issues_path) do %>
+            <%= t("layouts.issues") %>
+            <%= open_issues_count %>
+          <% end -%>
+        </li>
+      <% end %>
+      <li class="nav-item">
+        <%= link_to t("layouts.history"), history_path, :class => header_nav_link_class(history_path) %>
+      </li>
+      <li class="nav-item">
+        <%= link_to t("layouts.export"), export_path, :class => header_nav_link_class(export_path) %>
+      </li>
+      <li class="nav-item">
+        <%= link_to t("layouts.gps_traces"), traces_path, :class => header_nav_link_class(traces_path) %>
+      </li>
+<% end %>
 <% if false %>
       <li class="nav-item">
         <%= link_to t("layouts.communities"), communities_path, :class => header_nav_link_class(communities_path) %>
