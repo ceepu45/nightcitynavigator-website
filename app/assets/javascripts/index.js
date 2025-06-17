@@ -132,12 +132,14 @@ $(function () {
     })
   ]);
 
+  /*
   addControlGroup([
     L.OSM.note({
       position: position,
       sidebar: sidebar
     })
   ]);
+  */
 
   addControlGroup([
     L.OSM.query({

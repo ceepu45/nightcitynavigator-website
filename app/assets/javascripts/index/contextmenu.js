@@ -23,6 +23,7 @@ OSM.initializeContextMenu = function (map) {
     }
   });
 
+  /*
   map.contextmenu.addItem({
     text: OSM.i18n.t("javascripts.context.add_note"),
     callback: function addNoteHere(e) {
@@ -31,6 +32,7 @@ OSM.initializeContextMenu = function (map) {
       OSM.router.route("/note/new?" + new URLSearchParams({ lat, lon }));
     }
   });
+  */
 
   map.contextmenu.addItem({
     text: OSM.i18n.t("javascripts.context.show_address"),
